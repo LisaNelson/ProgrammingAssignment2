@@ -28,11 +28,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-#CacheSolve accepts the environment created by makeCacheMatrix
-#It checks to see if it has already been invoked and performed the calculation
+## Return a matrix that is the inverse of 'x'
 #If a value for the inversion is already stored, it brings back from cache
 #If not, it performs the calculation
-#The code is essentially unchanged from the original (functions are renamed)
 cacheSolve <- function(x, ...) {
      m <- x$getinverse()        #checks for existing value
      if(!is.null(m)) {          #if it exists, get from cache and return 
